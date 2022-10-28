@@ -1,9 +1,26 @@
 <div class="container">
-  <h4 class="my-3">Third module works!</h4>
+  <h5 class="my-3">Third module works!</h5>
   <div class="row">
     <div class="col">
-
-
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActive]="'active'" routerLink="/third-module/page-one">Page One</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActive]="'active'" routerLink="/third-module/page-two">Page Two</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActive]="'active'" routerLink="/third-module/page-three">Page Three</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

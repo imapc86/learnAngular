@@ -26,6 +26,25 @@ header.header{
   }
 }
 
-.nav-link:hover{
-  color: rgb(15, 241, 165);
+.nav-link{
+  position: relative;
+
+  &::before{
+    content: '';
+    width: 0%;
+    position: absolute;
+    bottom: -2px;
+    right: 50%;
+    transform: translateX(50%);
+    border-bottom: 2px solid rgb(15, 241, 165);
+    transition: width 0.5s;
+  }
+
+  &:hover{
+    color: rgb(15, 241, 165);
+
+    &::before{
+      width: 100%;
+    }
+  }
 }
