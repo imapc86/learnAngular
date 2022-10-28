@@ -1,0 +1,17 @@
+<div class="container">
+  <h5 class="my-3">Second Module workd!</h5>
+  <div class="row">
+    <div class="col col-md-3">
+      <div class="list-group">
+        <a [routerLinkActive]="'active'" routerLink="/second-module/page-one" class="list-group-item list-group-item-action">Page one</a>
+        <a [routerLinkActive]="'active'" routerLink="/second-module/page-two" class="list-group-item list-group-item-action">Page two</a>
+        <a [routerLinkActive]="'active'" routerLink="/second-module/page-three" class="list-group-item list-group-item-action">Page three</a>
+        <a [routerLinkActive]="'active'" routerLink="/second-module/page-four" class="list-group-item list-group-item-action">Page four</a>
+      </div>
+    </div>
+    <div class="col col-md-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+

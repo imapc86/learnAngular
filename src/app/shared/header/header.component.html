@@ -1,0 +1,17 @@
+<header class="header d-flex align-items-center">
+  <div class="container">
+    <div class="d-flex justify-content-between">
+      <div class="logo align-self-center">
+        <a class="nav-link" routerLink="first-module">Logo</a>
+      </div>
+      <nav class="navbar">
+        <ul class="d-flex mb-0">
+          <li class="nav-item"><a [routerLinkActive]="'active'" routerLink="first-module" class="nav-link">Modulo Uno</a></li>
+          <li class="nav-item"><a [routerLinkActive]="'active'" routerLink="second-module" class="nav-link">Modulo Dos</a></li>
+          <li class="nav-item"><a [routerLinkActive]="'active'" routerLink="third-module" class="nav-link">Modulo Tres</a></li>
+          <li class="nav-item"><a [routerLinkActive]="'active'" routerLink="fourth-module" class="nav-link">Modulo Cuatro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
