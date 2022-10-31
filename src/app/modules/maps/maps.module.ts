@@ -4,6 +4,8 @@ import { MapScreenComponent } from './pages/map-screen/map-screen.component';
 import { MapsRoutingModule } from './maps-routing.module';
 import { LoadingComponent } from './components/loading/loading.component';
 import { MapViewComponent } from './components/map-view/map-view.component';
+import { AngularLogoComponent } from './components/angular-logo/angular-logo.component';
+import { BtnMyLocationComponent } from './components/btn-my-location/btn-my-location.component';
 
 
 
@@ -11,7 +13,9 @@ import { MapViewComponent } from './components/map-view/map-view.component';
   declarations: [
     MapScreenComponent,
     LoadingComponent,
-    MapViewComponent
+    MapViewComponent,
+    AngularLogoComponent,
+    BtnMyLocationComponent
   ],
   imports: [
     CommonModule,
