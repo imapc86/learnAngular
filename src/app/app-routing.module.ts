@@ -33,6 +33,10 @@ const routes: Routes = [
   {
     path: 'fourth-module',
     loadChildren: () => import('./modules/fourth/fourth.module').then(m => FourthModule)
+  },
+  {
+    path: 'maps',
+    loadChildren: () =>import('./modules/maps/maps.module').then(m => m.MapsModule)
   }
 ];
 
