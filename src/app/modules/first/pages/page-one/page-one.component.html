@@ -1,1 +1,19 @@
-<p>page-one works!</p>
+<div class="container">
+    <h5 class="my-3">Fisrt Module - Página Uno </h5>
+    <div class="row">
+      <div class="col-6 offset-3">
+        <div class="card">
+          <h6 class="card-header">User</h6>
+          <div class="card-body">
+            <h5 class="card-title">Este es el nombre de usuario:</h5>
+            <p> {{ userName }} </p>
+
+            <button class="btn btn-warning" (click)="resetUserName()" >Resetear</button>
+          </div>
+        </div>
+        <div class="mt-3 d-block">
+          <a routerLink="/first-module" style="width: max-content;" class="d-block mx-auto btn btn-outline-secondary">Regresar a página uno</a>
+        </div>
+      </div>
+    </div>
+  </div>

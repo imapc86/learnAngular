@@ -1,8 +1,18 @@
 <div class="container">
   <h5 class="my-3">Fisrt Module</h5>
   <div class="row">
-    <div class="col">
-      
+    <div class="col-6 offset-3">
+      <div class="card">
+        <h6 class="card-header">User</h6>
+        <div class="card-body">
+          <h5 class="card-title">Escribe tu nombre de usuario:</h5>
+          <input type="text" class="form-control" placeholder="userName" [(ngModel)]="userName">
+          <button class="mt-3 btn btn-primary float-end" (click)="saveRole()">Guardar</button>
+        </div>
+      </div>
+      <div class="mt-3 d-block">
+        <a routerLink="/first-module/page-one" style="width: 50%;" class="d-block mx-auto btn btn-outline-secondary">Ir a la página uno</a>
+      </div>
     </div>
   </div>
 </div>

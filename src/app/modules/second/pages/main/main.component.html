@@ -1,5 +1,12 @@
 <div class="container">
-  <h5 class="my-3">Second Module workd!</h5>
+  <!-- <h5 class="my-3">{{ title }}</h5> -->
+  <!-- <h5 class="my-3">{{ dataService.titulo$ | async  }}</h5> -->
+  
+  <h5 class="my-3" *ngIf="dataService.titulo$ | async as nombre; else noData">{{nombre}}</h5>
+  <ng-template #noData>
+    <h5 class="my-3">Página principal (main)</h5>
+  </ng-template>
+  
   <div class="row">
     <div class="col col-md-3">
       <div class="list-group">

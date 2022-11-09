@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataEventService } from '../../services/data-event.service';
 
 @Component({
   selector: 'app-page-one',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageOneComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataSv: DataEventService) { }
 
   ngOnInit(): void {
+  }
+
+  changeTitle(){
+    console.log('M2 - Página one');
+    this.dataSv.titulo$.emit('¡Página Uno!');
   }
 
 }
