@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SetNameService } from '../../services/set-name.service';
 import { SetUserNameService } from '../../services/set-userName.service';
 
 @Component({
@@ -9,15 +10,29 @@ import { SetUserNameService } from '../../services/set-userName.service';
 export class MainComponent implements OnInit {
 
   public userName: string = '';
+  public name: string = '';
+  public country: string = '';
 
-  constructor(private userNameSv: SetUserNameService) { }
+  constructor(private userNameSv: SetUserNameService, private nameSv: SetNameService) { }
 
   ngOnInit(): void {
   }
 
-  saveRole(){
+  saveUserName(){
 
     this.userNameSv.userRole.next(this.userName);
+
+  }
+
+  saveName(){
+
+    this.nameSv.nameSet = this.name;
+
+  }
+
+  saveCountry(){
+
+    this.userNameSv.userCountry.next(this.country);
 
   }
 

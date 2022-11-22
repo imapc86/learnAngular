@@ -1,18 +1,40 @@
 <div class="container">
   <h5 class="my-3">Fisrt Module</h5>
   <div class="row">
-    <div class="col-6 offset-3">
+    <div class="col-4">
       <div class="card">
-        <h6 class="card-header">User</h6>
+        <h6 class="card-header">UserName con BehaviorSubject</h6>
         <div class="card-body">
           <h5 class="card-title">Escribe tu nombre de usuario:</h5>
           <input type="text" class="form-control" placeholder="userName" [(ngModel)]="userName">
-          <button class="mt-3 btn btn-primary float-end" (click)="saveRole()">Guardar</button>
+          <button class="mt-3 btn btn-primary float-end" (click)="saveUserName()">Guardar</button>
         </div>
       </div>
-      <div class="mt-3 d-block">
-        <a routerLink="/first-module/page-one" style="width: 50%;" class="d-block mx-auto btn btn-outline-secondary">Ir a la página uno</a>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <h6 class="card-header">OnlyName con Setter y Getter</h6>
+        <div class="card-body">
+          <h5 class="card-title">Escribe tu nombre:</h5>
+          <input type="text" class="form-control" placeholder="Escribe tu nombre" [(ngModel)]="name">
+          <button class="mt-3 btn btn-primary float-end" (click)="saveName()">Guardar</button>
+        </div>
       </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <h6 class="card-header">Country - con Subject</h6>
+        <div class="card-body">
+          <h5 class="card-title">Escribe tu país:</h5>
+          <input type="text" class="form-control" placeholder="Escribe tu pais" [(ngModel)]="country">
+          <button class="mt-3 btn btn-primary fload-end" (click)="saveCountry()">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="mt-3 d-block">
+      <a routerLink="/first-module/page-one" style="width: 50%;" class="d-block mx-auto btn btn-outline-secondary">Ir a la página uno</a>
     </div>
   </div>
 </div>
