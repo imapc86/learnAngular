@@ -16,6 +16,7 @@ export class MainComponent implements OnInit {
   constructor(private userNameSv: SetUserNameService, private nameSv: SetNameService) { }
 
   ngOnInit(): void {
+    console.log('En MAIN');
   }
 
   saveUserName(){
@@ -32,6 +33,7 @@ export class MainComponent implements OnInit {
 
   saveCountry(){
 
+    //* Este valor no se guardará porque no hay una subscripción previa (Subject):
     this.userNameSv.userCountry.next(this.country);
 
   }

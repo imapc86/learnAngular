@@ -6,19 +6,6 @@ import { ThirdModule } from './modules/third/third.module';
 
 const routes: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'first-module'
-  },
-  {
-    path: '**',
-    redirectTo: 'errors/not-found'
-  },
-  {
-    path: 'not-found',
-    component: NotFoundComponent
-  },
-  {
     path: 'first-module',
     loadChildren: () => import('./modules/first/first.module').then(m => m.FirstModule)
   },
@@ -37,6 +24,19 @@ const routes: Routes = [
   {
     path: 'maps',
     loadChildren: () =>import('./modules/maps/maps.module').then(m => m.MapsModule)
+  },
+  {
+    path: 'errors/not-found',
+    component: NotFoundComponent
+  },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'first-module'
+  },
+  {
+    path: '**',
+    redirectTo: 'errors/not-found'
   }
 ];
 

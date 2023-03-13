@@ -1,19 +1,29 @@
-<div class="container">
+<div class="container pb-3">
   <h5 class="my-3">Fisrt Module</h5>
   <div class="row">
     <div class="col-4">
       <div class="card">
-        <h6 class="card-header">UserName con BehaviorSubject</h6>
+        <h6 class="card-header">UserName con <span class="fw-bold">BehaviorSubject</span></h6>
         <div class="card-body">
           <h5 class="card-title">Escribe tu nombre de usuario:</h5>
-          <input type="text" class="form-control" placeholder="userName" [(ngModel)]="userName">
-          <button class="mt-3 btn btn-primary float-end" (click)="saveUserName()">Guardar</button>
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="userName" [(ngModel)]="userName">
+              <button class="mt-3 btn btn-primary float-end" (click)="saveUserName()">Guardar</button>
+            </div>
+          </div>
+          <code class="my-3">
+            {{userName}}
+          </code>
+          <div class="notes">
+            <p>BehaviorSubject necesita inicializar la variable.</p>
+          </div>
         </div>
       </div>
     </div>
     <div class="col-4">
       <div class="card">
-        <h6 class="card-header">OnlyName con Setter y Getter</h6>
+        <h6 class="card-header">OnlyName con <span class="fw-bold">Setter y Getter</span></h6>
         <div class="card-body">
           <h5 class="card-title">Escribe tu nombre:</h5>
           <input type="text" class="form-control" placeholder="Escribe tu nombre" [(ngModel)]="name">
@@ -23,7 +33,7 @@
     </div>
     <div class="col-4">
       <div class="card">
-        <h6 class="card-header">Country - con Subject</h6>
+        <h6 class="card-header">Country con  <span class="fw-bold">Subject</span></h6>
         <div class="card-body">
           <h5 class="card-title">Escribe tu país:</h5>
           <input type="text" class="form-control" placeholder="Escribe tu pais" [(ngModel)]="country">
@@ -35,6 +45,8 @@
   <div class="row">
     <div class="mt-3 d-block">
       <a routerLink="/first-module/page-one" style="width: 50%;" class="d-block mx-auto btn btn-outline-secondary">Ir a la página uno</a>
+      <a routerLink="/first-module/page-two" style="width: 50%;" class="mt-3 d-block mx-auto btn btn-outline-secondary">Ir a la página dos</a>
     </div>
   </div>
 </div>
+ 

@@ -14,7 +14,11 @@ export class PageOneComponent implements OnInit, OnDestroy {
   public userCountry!: string;
 
   public subUserName_0!: Subscription;
-  public subUserName_1!: Subscription;
+  public subCountry!: Subscription;
+
+  subCounter!: Subscription;
+
+  counter: number = 0;
 
   get name(){
 
@@ -33,9 +37,18 @@ export class PageOneComponent implements OnInit, OnDestroy {
 
     });
 
-    this.subUserName_1 = this.userNameSv.userCountry.subscribe(value => {
+    this.subCounter = this.userNameSv.counter.subscribe(value => { 
+    
+      console.log(value);
+      this.counter = value; 
+    
+    });
 
+    this.subCountry = this.userNameSv.userCountry.subscribe(value => {
+
+      console.log({value, 'counter': this.counter});
       this.userCountry = value;
+      this.userNameSv.counter.next(this.counter+1);
 
     })
 
@@ -47,14 +60,16 @@ export class PageOneComponent implements OnInit, OnDestroy {
 
 
   setCountry(){
-
-    this.userNameSv.userCountry.next('País default');
+    
+    this.userNameSv.userCountry.next('México');
 
   }
 
   ngOnDestroy(): void {
     this.subUserName_0.unsubscribe();
-    this.subUserName_1.unsubscribe();
+    this.subCountry.unsubscribe();
+
+    this.subCounter.unsubscribe();
   }
 
 }

@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container pb-3">
     <h5 class="my-3">Fisrt Module - Página Uno </h5>
     <div class="row">
-      <div class="col-6 offset-3">
+      <div class="col-sm-12 col-md-6 offset-md-3">
         <div class="card">
           <h6 class="card-header">User</h6>
           <div class="card-body">
@@ -12,6 +12,7 @@
             <p> {{ name }} </p>
             <hr>
             <h5 class="card-title">Este es el país:</h5>
+            <p>Número de observables: <span class="fw-bold">{{counter}}</span> </p>
             <p>{{ userCountry }}</p>
             <hr>
             <!-- <button class="btn btn-warning" (click)="resetUserName()" >Resetear</button> -->
@@ -19,7 +20,7 @@
           </div>
         </div>
         <div class="mt-3 d-block">
-          <a routerLink="/first-module" style="width: max-content;" class="d-block mx-auto btn btn-outline-secondary">Regresar a página uno</a>
+          <a routerLink="/first-module" style="width: max-content;" class="d-block mx-auto btn btn-outline-secondary">Regresar Main Page</a>
         </div>
       </div>
     </div>

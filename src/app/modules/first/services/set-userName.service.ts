@@ -6,8 +6,10 @@ import { BehaviorSubject, Subject } from 'rxjs';
 })
 export class SetUserNameService {
 
-  public userRole = new BehaviorSubject<string>('userRole');
+  public userRole = new BehaviorSubject<string>('userDefaultRole');
   public userCountry = new Subject<string>();
+
+  public counter = new BehaviorSubject<number>(0);
 
   constructor() { }
 }
