@@ -1,0 +1,14 @@
+<div class="color-picker-container">
+  <div class="selected-color-container">
+    <div class="selected-color"></div>
+    <i class="bi bi-caret-down-fill"></i>
+  </div>
+  <div class="color-picker">
+    <div class="color-container">
+      <div class="color-selector-point"></div>
+    </div>
+    <div class="color-bar">
+      <div class="color-selector" (mousedown)="startDragging($event)"></div>
+    </div>
+  </div>
+</div>

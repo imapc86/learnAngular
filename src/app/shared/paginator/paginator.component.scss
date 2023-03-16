@@ -1,0 +1,39 @@
+.nav-pagination{
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+
+  li{
+    display: inline;
+    width: 55px;
+
+    span{
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+}
+
+li.btn-red{
+  span{
+    color: rgb(255,0,0) !important;
+  }
+  span.disabled{
+    color: rgba(255,0,0, 0.25) !important;
+    cursor: default;
+  }
+}
+
+li.active{
+  span{
+    color: white !important;
+    background-color: black;
+    border-radius: 5px;
+    cursor: default !important;
+  }
+}

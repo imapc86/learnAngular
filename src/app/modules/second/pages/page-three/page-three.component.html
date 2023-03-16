@@ -1,1 +1,15 @@
-<p>page-three works!</p>
+<div class="card mb-3">
+  <div class="card-header">
+    <h6>Paginación</h6>
+  </div>
+  <div class="card-body">
+
+    <pre>{{ pokemons | json }}</pre>
+    
+    <app-paginator
+      [currentPage]="currentPage"
+      [totalPages]="totalPages"
+      (onChangePage)="changePage($event)"
+    ></app-paginator>
+  </div>
+</div>

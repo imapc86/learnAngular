@@ -4,6 +4,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { ModalComponent } from './modal/modal.component';
+import { PaginatorComponent } from './paginator/paginator.component';
+import { ColorPickerComponent } from './color-picker/color-picker.component';
 
 
 
@@ -12,6 +14,8 @@ import { ModalComponent } from './modal/modal.component';
     HeaderComponent,
     FooterComponent,
     ModalComponent,
+    PaginatorComponent,
+    ColorPickerComponent,
   ],
   imports: [
     CommonModule,
@@ -20,6 +24,8 @@ import { ModalComponent } from './modal/modal.component';
   exports:[
     HeaderComponent,
     FooterComponent,
+    PaginatorComponent,
+    ColorPickerComponent
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,17 @@
+<div class="d-flex w-90 justify-content-center" *ngIf="totalPages > 0">
+  <ul class="nav-pagination">
+    <li class="btn-red"(click)="changePage(currentPage - 1)">
+      <span class="" [class.disabled]="currentPage==1"><</span>
+    </li>
+    <li 
+      *ngFor="let page of pagesToShow" 
+      [class.active]="page == currentPage"
+      (click)="changePage(page)"
+    >
+      <span>{{page}}</span>
+    </li>
+    <li class="btn-red" (click)="changePage(currentPage + 1)">
+      <span class="" [class.disabled]="currentPage==totalPages">></span>
+    </li>
+  </ul>
+</div>

@@ -7,6 +7,7 @@ import { PageTwoComponent } from './pages/page-two/page-two.component';
 import { MainComponent } from './pages/main/main.component';
 import { PageThreeComponent } from './pages/page-three/page-three.component';
 import { PageFourComponent } from './pages/page-four/page-four.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PageFourComponent } from './pages/page-four/page-four.component';
   ],
   imports: [
     CommonModule,
-    SecondRoutingModule
+    SecondRoutingModule,
+    SharedModule
   ]
 })
 export class SecondModule { }
